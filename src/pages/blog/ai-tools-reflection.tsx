@@ -1,6 +1,5 @@
 import { BlogWrapper } from "@/components/blog/BlogWrapper";
 import { BlogContent } from "@/components/blog/BlogContent";
-import Link from "@/components/blog/ui/Link";
 import NextLink from "next/link";
 
 export default function BlogPost() {

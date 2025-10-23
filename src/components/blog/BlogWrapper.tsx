@@ -1,5 +1,4 @@
 import { MotionProps, motion, useDragControls } from "motion/react";
-import Link from "next/link";
 import { ComponentProps, useRef } from "react";
 import { cn } from "@/util/utils";
 

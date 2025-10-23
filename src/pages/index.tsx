@@ -1,8 +1,5 @@
 import { PageContent } from "@/components/PageContent";
 import { PageWrapper } from "@/components/PageWrapper";
-import { AnimatePresence, motion } from "motion/react";
-import { useRef, useState } from "react";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -100,75 +97,3 @@ export default function Home() {
     </PageWrapper>
   );
 }
-
-const LinkPreview = ({
-  href,
-  preview,
-  children,
-}: {
-  href: string;
-  preview: string;
-  children: React.ReactNode;
-}) => {
-  const [showPreview, setShowPreview] = useState(false);
-  const linkRef = useRef<HTMLAnchorElement>(null);
-
-  return (
-    <div>
-      <AnimatePresence>
-        {showPreview ? (
-          <motion.a
-            initial={{ scale: 0.98, x: -4, opacity: 0 }}
-            animate={{ scale: 1, x: 0, opacity: 1 }}
-            exit={{
-              scale: 0.98,
-
-              x: -4,
-              opacity: 0,
-              transition: { delay: 0.015 },
-            }}
-            href={href}
-            target="_blank"
-            rel="noreferrer noopener"
-            onMouseOver={() => setShowPreview(true)}
-            onMouseLeave={() => setShowPreview(false)}
-            transition={{
-              duration: 0.25,
-              ease: [0.26, 1, 0.6, 1],
-            }}
-            className="group fixed left-54 z-10 max-w-64 min-w-64 overflow-clip rounded-[8px] border border-black/20 bg-[#E7E5E4] p-0.5 shadow-lg transition-colors duration-100 hover:bg-[#efebe9] max-sm:hidden"
-            style={{
-              marginTop: `calc(-${
-                linkRef.current?.getBoundingClientRect().height ?? 0
-              }px)`,
-            }}
-          >
-            <Image
-              src={preview}
-              alt={`Screenshot of ${href}'s landing`}
-              width={512}
-              height={272}
-              className="bg-tertiary overflow-clip rounded-[6px]"
-            />
-
-            <p className="text-tertiary w-full rounded-full px-1.5 pt-1 text-center text-xs font-medium transition-colors duration-100 group-hover:text-blue-700">
-              {href.split("://")[1]}
-            </p>
-          </motion.a>
-        ) : null}
-      </AnimatePresence>
-
-      <a
-        ref={linkRef}
-        href={href}
-        target="_blank"
-        rel="noreferrer noopener"
-        onMouseOver={() => setShowPreview(true)}
-        onMouseLeave={() => setShowPreview(false)}
-        className="group relative flex w-full max-w-44 flex-col whitespace-nowrap"
-      >
-        {children}
-      </a>
-    </div>
-  );
-};

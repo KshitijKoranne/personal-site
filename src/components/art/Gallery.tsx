@@ -1,5 +1,5 @@
 import { MotionProps, motion } from "motion/react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { StaticImageData } from "next/image";
 
 import ultrawide_minimalism_1 from "../../../public/art/min/ultrawide_minimalism_1.webp";
