@@ -27,19 +27,11 @@ export const BlogWrapper = ({
         ease: [0.26, 1, 0.6, 1],
       }}
       className={cn(
-        "absolute top-0 left-0 z-100 h-screen w-full overflow-y-auto bg-white sm:px-14",
+        "absolute top-0 left-0 z-100 h-screen w-full overflow-y-auto sm:px-14",
         className,
       )}
       {...props}
     >
-      <Link
-        href="/blog"
-        shallow={true}
-        className="hover:text-primary text-tertiary relative top-10 cursor-pointer text-sm transition-colors duration-100 max-md:ml-8 md:sticky md:top-10 md:left-0"
-      >
-        Back
-      </Link>
-
       {children}
 
       {/* Scroller  */}

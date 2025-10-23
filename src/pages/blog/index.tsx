@@ -11,7 +11,14 @@ interface BlogItem {
   date: string;
 }
 
-export const POSTS: BlogItem[] = [];
+export const POSTS: BlogItem[] = [
+  {
+    slug: "ai-tools-reflection",
+    title: "are AI tools making us lazy thinkers?",
+    description: "exploring whether AI tools help or hurt our thinking abilities.",
+    date: "23 Oct 2025",
+  },
+];
 
 export default function Blog() {
   type BlogRef = HTMLAnchorElement | null;

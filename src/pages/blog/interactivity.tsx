@@ -1,15 +1,25 @@
 import { BlogWrapper } from "@/components/blog/BlogWrapper";
 import { BlogContent } from "@/components/blog/BlogContent";
 import Link from "@/components/blog/ui/Link";
+import NextLink from "next/link";
 
 export default function BlogPost() {
   return (
     <BlogWrapper>
       <BlogContent>
         <div>
-          <header className="font-bold text-2xl mt-8">
-            Digital is physical.
-          </header>
+          <div className="flex items-center gap-3 mt-8">
+            <NextLink
+              href="/blog"
+              shallow={true}
+              className="hover:text-primary text-tertiary cursor-pointer transition-colors duration-100"
+            >
+              ←
+            </NextLink>
+            <header className="font-bold text-2xl">
+              Digital is physical.
+            </header>
+          </div>
           <p className="text-secondary text-base">01/24/25</p>
         </div>
         <p>

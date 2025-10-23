@@ -7,6 +7,7 @@ const PAGES = {
   home: "/",
   blog: "/blog",
   walls: "/walls",
+  quotes: "/quotes",
   "about-me": "/about-me",
 } as const;
 

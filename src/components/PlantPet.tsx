@@ -20,9 +20,9 @@ export const PlantPet = () => {
   // Initialize audio and load clicks from localStorage
   useEffect(() => {
     setMounted(true);
-    const popAudio = new Audio("/pop.mp3");
-    popAudio.volume = 0.3;
-    setAudio(popAudio);
+    const waterAudio = new Audio("/water-bubble.wav");
+    waterAudio.volume = 0.3;
+    setAudio(waterAudio);
 
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
