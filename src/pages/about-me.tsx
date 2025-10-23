@@ -19,7 +19,7 @@ export default function Home() {
               <p>
                 - i&apos;m <CurrentAge /> years old
               </p>
-              <p>- i like attention to detail (although i am still in learning phase)</p>
+              <p>- i am an avid League of Legends (LoL) fan, following the game since 2011</p>
               <p className="whitespace-nowrap">
                 - i wanted to be a developer but somehow ended up pursuing pharmacy
               </p>

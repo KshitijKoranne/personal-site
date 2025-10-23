@@ -90,6 +90,19 @@ export default function Home() {
                 </p>
                 <p className="text-tertiary text-xs">— Fun & Interactive time wasting activities</p>
               </div>
+              <div>
+                <p className="font-medium">
+                  <a
+                    href="https://github.com/KshitijKoranne/personal-site/releases/download/SuperAnnotate-ver.1.0.0/SuperAnnotate-Windows.zip"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    download
+                  >
+                    SuperAnnotate
+                  </a>
+                </p>
+                <p className="text-tertiary text-xs">— Beautiful Screen Annotations Made Effortless</p>
+              </div>
             </div>
           </div>
         </div>

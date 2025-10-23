@@ -2,6 +2,7 @@ import { cn } from "@/util/utils";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PlantPet } from "./PlantPet";
+import AmbientMusic from "./AmbientMusic";
 
 const PAGES = {
   home: "/",
@@ -33,7 +34,8 @@ export const Nav = () => {
           </Link>
         ))}
       </div>
-      <div className="fixed top-10 right-10 z-[100] hidden sm:flex">
+      <div className="fixed top-10 right-10 z-[100] hidden sm:flex items-center gap-4">
+        <AmbientMusic />
         <PlantPet />
       </div>
     </>

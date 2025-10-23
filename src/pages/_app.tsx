@@ -6,7 +6,6 @@ import Head from "next/head";
 import { AppProps } from "next/app";
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ThemeProvider } from "next-themes";
 import { Nav } from "@/components/Nav";
 import { MobileNav } from "@/components/MobileNav";
 import { BottomRightFooter } from "@/components/BottomRightFooter";
@@ -86,7 +85,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="prefetch" fetchPriority="high" href="/main/cside.webp" />
         <link rel="prefetch" fetchPriority="high" href="/main/dimension.webp" />
         <link rel="prefetch" fetchPriority="high" href="/main/incard.webp" />
@@ -96,52 +94,50 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <div
         className={`${helveticaNeue.variable} ${ysabeau.variable} ${karla.variable} ${kalam.variable} @container/screen h-full w-full font-sans antialiased`}
       >
-        <ThemeProvider>
-          {/* Background Wallpaper */}
-          <motion.div
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 0.6,
-            }}
-            transition={{
-              duration: 2,
-              ease: [0.26, 1, 0.6, 1],
-            }}
-            className="fixed top-0 left-0 z-[-3] h-screen w-screen bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/wallpaper.png')",
-            }}
-          />
+        {/* Background Wallpaper */}
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 0.6,
+          }}
+          transition={{
+            duration: 2,
+            ease: [0.26, 1, 0.6, 1],
+          }}
+          className="fixed top-0 left-0 z-[-3] h-screen w-screen bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/wallpaper.png')",
+          }}
+        />
 
-          <Nav />
-          <MobileNav />
-          <BottomRightFooter />
+        <Nav />
+        <MobileNav />
+        <BottomRightFooter />
 
-          <motion.main
-            initial={{
-              opacity: 0,
-              scale: 0.98,
-              filter: "blur(4px)",
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              filter: "blur(0px)",
-            }}
-            transition={{
-              duration: 1,
-              ease: [0.26, 1, 0.6, 1],
-            }}
-            layout
-            className="relative max-sm:h-[100svh] max-sm:overflow-y-auto"
-          >
-            <AnimatePresence mode="popLayout">
-              <Component {...pageProps} key={router.pathname} />
-            </AnimatePresence>
-          </motion.main>
-        </ThemeProvider>
+        <motion.main
+          initial={{
+            opacity: 0,
+            scale: 0.98,
+            filter: "blur(4px)",
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 1,
+            ease: [0.26, 1, 0.6, 1],
+          }}
+          layout
+          className="relative max-sm:h-[100svh] max-sm:overflow-y-auto"
+        >
+          <AnimatePresence mode="popLayout">
+            <Component {...pageProps} key={router.pathname} />
+          </AnimatePresence>
+        </motion.main>
       </div>
     </>
   );

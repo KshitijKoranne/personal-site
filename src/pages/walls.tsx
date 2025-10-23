@@ -10,6 +10,9 @@ export default function Art() {
             <p className="mb-2">
               some expression of my mind - buying these digital copies greatly helps small devs like me.
             </p>
+            <p className="text-tertiary italic">
+              coming soon
+            </p>
           </div>
         </div>
       </PageContent>
