@@ -9,8 +9,8 @@ const PAGES = {
   blog: "/blog",
   walls: "/walls",
   quotes: "/quotes",
-  "about-me": "/about-me",
   software: "/software",
+  "about-me": "/about-me",
 } as const;
 
 export const Nav = () => {

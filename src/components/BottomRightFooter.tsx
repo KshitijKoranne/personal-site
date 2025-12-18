@@ -19,10 +19,20 @@ export const BottomRightFooter = () => {
       setDate(dayjs().tz("Asia/Kolkata"));
     };
 
-    const id = setInterval(update, 60 * 1000);
+    const id = setInterval(update, 1000);
 
     return () => clearInterval(id);
   }, []);
+
+  const getActivityStatus = () => {
+    if (!date) return "";
+    const hour = date.hour();
+    if (hour >= 23 || hour < 6) return "I am probably sleeping";
+    if (hour >= 9 && hour < 17) return "I am working";
+    return "I might be building something";
+  };
+
+  const status = getActivityStatus();
 
   // Hide footer on walls page
   if (pathname === "/walls") {
@@ -55,15 +65,24 @@ export const BottomRightFooter = () => {
         </a>
       </div>
 
-       <p className="text-primary flex cursor-default flex-row items-center gap-1.5 text-sm">
-        {date && (
-          <>
-            <span className="font-medium">{date.format("h:mm A")}</span>
-            <span className="bg-primary block size-[3px] rounded-full" />
-            <span className="text-tertiary">{date.format("MMM D, YYYY")}</span>
-          </>
-        )}
-      </p>
+       <div className="group relative flex flex-col items-end">
+        {/* Tooltip-like message on hover */}
+        <div className="pointer-events-none absolute bottom-full mb-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+           <div className="rounded-md border border-slate-600 bg-slate-800 px-3 py-1.5 text-xs whitespace-nowrap text-white shadow-lg">
+             {status}
+           </div>
+        </div>
+
+        <p className="text-primary flex cursor-default flex-row items-center gap-1.5 text-sm">
+          {date && (
+            <>
+              <span className="font-medium">{date.format("h:mm A")}</span>
+              <span className="bg-primary block size-[3px] rounded-full" />
+              <span className="text-tertiary">{date.format("MMM D, YYYY")}</span>
+            </>
+          )}
+        </p>
+      </div>
     </motion.footer>
   );
 };
