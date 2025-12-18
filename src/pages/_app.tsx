@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Nav } from "@/components/Nav";
 import { MobileNav } from "@/components/MobileNav";
 import { BottomRightFooter } from "@/components/BottomRightFooter";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 const ysabeau = Ysabeau({
   subsets: ["latin"],
@@ -96,23 +97,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <div
         className={`${helveticaNeue.variable} ${ysabeau.variable} ${karla.variable} ${kalam.variable} @container/screen h-full w-full font-sans antialiased`}
       >
-        {/* Background Wallpaper */}
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 0.6,
-          }}
-          transition={{
-            duration: 2,
-            ease: [0.26, 1, 0.6, 1],
-          }}
-          className="fixed top-0 left-0 z-[-3] h-screen w-screen bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/wallpaper.png')",
-          }}
-        />
+        {/* Particles Background */}
+        <ParticlesBackground />
 
         <Nav />
         <MobileNav />

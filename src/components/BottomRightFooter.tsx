@@ -10,9 +10,11 @@ dayjs.extend(timezone);
 
 export const BottomRightFooter = () => {
   const { pathname } = useRouter();
-  const [date, setDate] = useState(() => dayjs().tz("Asia/Kolkata"));
+  const [date, setDate] = useState<dayjs.Dayjs | null>(null);
 
   useEffect(() => {
+    setDate(dayjs().tz("Asia/Kolkata"));
+
     const update = () => {
       setDate(dayjs().tz("Asia/Kolkata"));
     };
@@ -53,12 +55,14 @@ export const BottomRightFooter = () => {
         </a>
       </div>
 
-      <p className="text-primary flex cursor-default flex-row items-center gap-1.5 text-sm">
-        <span className="font-medium">{date.format("h:mm A")}</span>
-        <span className="bg-primary block size-[3px] rounded-full" />
-        <span className="text-tertiary">
-          {date.format("MMM D, YYYY")}
-        </span>
+       <p className="text-primary flex cursor-default flex-row items-center gap-1.5 text-sm">
+        {date && (
+          <>
+            <span className="font-medium">{date.format("h:mm A")}</span>
+            <span className="bg-primary block size-[3px] rounded-full" />
+            <span className="text-tertiary">{date.format("MMM D, YYYY")}</span>
+          </>
+        )}
       </p>
     </motion.footer>
   );

@@ -10,6 +10,7 @@ const PAGES = {
   walls: "/walls",
   quotes: "/quotes",
   "about-me": "/about-me",
+  software: "/software",
 } as const;
 
 export const Nav = () => {

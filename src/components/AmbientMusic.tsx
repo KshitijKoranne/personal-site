@@ -104,7 +104,7 @@ export default function AmbientMusic() {
             alt="Music"
             width={32}
             height={32}
-            style={{ filter: 'brightness(0)' }}
+            style={{ filter: 'brightness(0) invert(1)' }}
           />
         </motion.button>
 

@@ -132,9 +132,9 @@ export const PlantPet = () => {
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="absolute top-full right-0 mt-2 bg-stone-50 border border-primary/10 rounded-md px-3 py-1.5 shadow-lg whitespace-nowrap z-50"
+          className="absolute top-full right-0 mt-2 bg-slate-800 border border-slate-600 rounded-md px-3 py-1.5 shadow-lg whitespace-nowrap z-50"
         >
-          <p className="text-primary text-xs">{tooltipText}</p>
+          <p className="text-white text-xs">{tooltipText}</p>
         </motion.div>
       )}
     </div>

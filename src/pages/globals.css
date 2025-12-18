@@ -15,11 +15,11 @@
 }
 
 :root {
-  --color-primary: #000000;
-  --color-secondary: #4c4c4c;
-  --color-tertiary: #838383;
-  --color-background: #fff;
-  --color-light: #8b8b8b;
+  --color-primary: #f1f5f9; /* Slate 100 */
+  --color-secondary: #cbd5e1; /* Slate 300 */
+  --color-tertiary: #94a3b8; /* Slate 400 */
+  --color-background: #0f172a; /* Slate 900 */
+  --color-light: #1e293b; /* Slate 800 */
 }
 
 ::selection {
