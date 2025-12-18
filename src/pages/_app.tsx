@@ -120,7 +120,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             ease: [0.26, 1, 0.6, 1],
           }}
           layout
-          className="relative max-sm:h-[100svh] max-sm:overflow-y-auto"
+          className="relative h-full overflow-y-auto"
         >
           <AnimatePresence mode="popLayout">
             <Component {...pageProps} key={router.pathname} />
