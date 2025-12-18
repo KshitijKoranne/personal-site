@@ -13,6 +13,12 @@ interface BlogItem {
 
 export const POSTS: BlogItem[] = [
   {
+    slug: "trends-dec-2025",
+    title: "Living in 2025: The Year AI Agents Took Over",
+    description: "reflecting on the rise of the 'silent web' and how agentic workflows changed everything.",
+    date: "18 Dec 2025",
+  },
+  {
     slug: "ai-tools-reflection",
     title: "are AI tools making us lazy thinkers?",
     description: "exploring whether AI tools help or hurt our thinking abilities.",

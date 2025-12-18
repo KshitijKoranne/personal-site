@@ -41,7 +41,7 @@ export default function BlogPost() {
           on understanding what the math actually means. same thing&apos;s
           happening with AI now.
         </p>
-        <div className="mt-4 px-4 py-3 border-l-4 border-tertiary bg-gray-50 text-sm text-primary/75 rounded-r-lg leading-5.5">
+        <div className="mt-4 px-4 py-3 border-l-4 border-tertiary bg-light text-sm text-primary/75 rounded-r-lg leading-5.5">
           memorizing syntax is pointless. understanding how systems work and
           solving real problems - that&apos;s what counts.
         </div>
@@ -82,7 +82,7 @@ export default function BlogPost() {
           the winners won&apos;t be people who avoid AI. they&apos;ll be the
           ones who learn when to use it and when to think hard on their own.
         </p>
-        <div className="mt-4 px-4 py-3 border-l-4 border-tertiary bg-gray-50 text-sm text-primary/75 rounded-r-lg leading-5.5">
+        <div className="mt-4 px-4 py-3 border-l-4 border-tertiary bg-light text-sm text-primary/75 rounded-r-lg leading-5.5">
           use AI to move faster. just don&apos;t forget to think about{" "}
           <i>what</i> you&apos;re building and <i>why</i>.
         </div>
