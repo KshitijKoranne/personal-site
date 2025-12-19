@@ -169,7 +169,7 @@ export default function Quotes() {
   return (
     <PageWrapper>
       <PageContent>
-        <div className="flex h-full flex-col gap-6 text-sm">
+        <div className="flex flex-col gap-6 text-sm">
           <div className="flex flex-col">
             <p className="mb-2">
               i had a habit of collecting quotes in my childhood which i still
@@ -178,7 +178,7 @@ export default function Quotes() {
             </p>
           </div>
 
-          <div className="flex flex-col divide-y divide-gray-200 dark:divide-gray-800">
+          <div className="flex flex-col divide-y divide-gray-200 dark:divide-gray-800 pb-20">
             <AnimatePresence mode="popLayout">
               {sortedQuotes.map((quote) => (
                 <QuoteItem

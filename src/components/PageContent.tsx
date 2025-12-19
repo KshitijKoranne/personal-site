@@ -9,7 +9,7 @@ export const PageContent = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
     return (
       <motion.div
         className={cn(
-          "max-xs:p-8 sticky top-0 flex h-min w-full flex-col p-10 max-sm:relative max-sm:min-h-min max-sm:overflow-y-auto max-sm:!pt-10 max-sm:pb-32 sm:max-w-lg sm:min-w-md sm:pt-16",
+          "max-xs:p-8 sticky top-0 flex h-min w-full flex-col p-10 max-sm:relative max-sm:min-h-min max-sm:!pt-10 max-sm:pb-40 sm:max-w-lg sm:min-w-md sm:pt-16",
           props.className,
         )}
       >

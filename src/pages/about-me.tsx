@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <PageWrapper>
       <PageContent>
-        <div className="flex h-full flex-col gap-6 text-sm">
+        <div className="flex flex-col gap-6 text-sm">
           <div className="flex flex-col">
             <p className="mb-2">
               you clicked it, you got it. here&apos;s some more:
@@ -20,7 +20,7 @@ export default function Home() {
                 - i&apos;m <CurrentAge /> years old
               </p>
               <p>- i am an avid League of Legends (LoL) fan, following the game since 2011</p>
-              <p className="whitespace-nowrap">
+              <p>
                 - i wanted to be a developer but somehow ended up pursuing pharmacy
               </p>
               <p>- i am married and have a cute daughter</p>

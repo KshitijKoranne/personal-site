@@ -14,7 +14,7 @@ export default function Software() {
       </Head>
       <PageWrapper>
         <PageContent>
-          <div className="text-primary flex h-full flex-col gap-6 text-sm max-md:pb-14">
+          <div className="text-primary flex flex-col gap-6 text-sm max-md:pb-14">
             <div className="flex flex-col gap-2">
               <h3 className="leading-none font-bold">softwares / apps</h3>
               <div className="ml-3 flex flex-col gap-3">
