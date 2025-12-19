@@ -81,7 +81,7 @@ function QuoteItem({
       className="flex items-start gap-3 py-3"
     >
       <div className="flex-1">
-        <p className="leading-relaxed">
+        <p className="leading-relaxed break-words">
           &quot;{quote.text}&quot; — {quote.author}
         </p>
       </div>

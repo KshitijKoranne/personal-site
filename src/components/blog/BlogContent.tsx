@@ -24,7 +24,7 @@ export const BlogContent = forwardRef<HTMLElement, HTMLMotionProps<"article">>(
           ease: [0.26, 1, 0.6, 1],
         }}
         style={{ scrollbarWidth: "none" }}
-        className="text-primary mx-auto flex h-min max-w-2xl flex-col gap-4 px-8 pb-14 text-sm leading-6.5 max-md:pt-4"
+        className="text-primary mx-auto flex h-min max-w-2xl flex-col gap-4 px-8 pb-14 text-sm leading-6.5 max-md:pt-4 max-md:pb-32"
         {...props}
       >
         {children}
