@@ -6,7 +6,7 @@ export default function Software() {
   return (
     <>
       <Head>
-        <title>Software | Kshitij Koranne</title>
+        <title>Kshitij's stash !</title>
         <meta
           name="description"
           content="Software and apps built by Kshitij Koranne"
@@ -42,18 +42,35 @@ export default function Software() {
                   </p>
                   <p className="text-tertiary text-xs">— Fun & Interactive time wasting activities</p>
                 </div>
-                <div>
-                  <p className="font-medium">
+                <div className="flex flex-col gap-1">
+                  <p className="font-medium text-primary">SuperAnnotate</p>
+                  <p className="text-tertiary text-xs mb-1">— Beautiful Screen Annotations Made Effortless</p>
+                  <div className="flex gap-3 text-xs">
                     <a
                       href="https://github.com/KshitijKoranne/personal-site/releases/download/SuperAnnotate-ver.1.0.0/SuperAnnotate-Windows.zip"
                       target="_blank"
                       rel="noreferrer noopener"
-                      download
+                      className="text-primary hover:underline"
                     >
-                      SuperAnnotate
+                      Windows
+                    </a>
+                    <span className="text-tertiary">|</span>
+                    <span className="text-tertiary italic cursor-help" title="Coming Soon">
+                      macOS (Coming Soon)
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <p className="font-medium">
+                    <a
+                      href="https://yt-snap.vercel.app"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      YTSnap
                     </a>
                   </p>
-                  <p className="text-tertiary text-xs">— Beautiful Screen Annotations Made Effortless</p>
+                  <p className="text-tertiary text-xs">— YouTube Thumbnail Extractor</p>
                 </div>
               </div>
             </div>
