@@ -13,6 +13,12 @@ interface BlogItem {
 
 export const POSTS: BlogItem[] = [
   {
+    slug: "mole-mac-app",
+    title: "Discovering 'Mole': The Minimal Cleaner My Mac Needed",
+    description: "my review of a deep cleaning CLI tool that combines the best of CleanMyMac and AppCleaner.",
+    date: "28 Dec 2025",
+  },
+  {
     slug: "trends-dec-2025",
     title: "Living in 2025: The Year AI Agents Took Over",
     description: "reflecting on the rise of the 'silent web' and how agentic workflows changed everything.",
