@@ -72,6 +72,27 @@ export default function Software() {
                   </p>
                   <p className="text-tertiary text-xs">— YouTube Thumbnail Extractor</p>
                 </div>
+                <div>
+                  <p className="font-medium">
+                    <a
+                      href="https://github.com/KshitijKoranne/good-vibes"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Good Vibe
+                    </a>
+                  </p>
+                  <p className="text-tertiary text-xs mb-1">— A minimal macOS menu bar app for daily quotes</p>
+                  <div className="flex gap-3 text-xs">
+                    <a
+                      href="/GoodVibe.dmg"
+                      className="text-primary hover:underline"
+                      download
+                    >
+                      Download for macOS
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
