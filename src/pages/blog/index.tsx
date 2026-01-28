@@ -13,6 +13,12 @@ interface BlogItem {
 
 export const POSTS: BlogItem[] = [
   {
+    slug: "moltbot-2026",
+    title: "the year 2026 exploded with AI agents – meet Moltbot",
+    description: "the wild story of Clawdbot's viral rise, chaotic rebrand, and what it means for the future of AI assistants.",
+    date: "28 Jan 2026",
+  },
+  {
     slug: "mole-mac-app",
     title: "Discovering 'Mole': The Minimal Cleaner My Mac Needed",
     description: "my review of a deep cleaning CLI tool that combines the best of CleanMyMac and AppCleaner.",
