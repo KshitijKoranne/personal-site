@@ -13,6 +13,12 @@ interface BlogItem {
 
 export const POSTS: BlogItem[] = [
   {
+    slug: "shipping-beats-hype",
+    title: "shipping beats hype. why small tools win.",
+    description: "why building small tools matters more than chasing the next big idea.",
+    date: "3 Feb 2026",
+  },
+  {
     slug: "moltbot-2026",
     title: "the year 2026 exploded with AI agents – meet Moltbot",
     description: "the wild story of Clawdbot's viral rise, chaotic rebrand, and what it means for the future of AI assistants.",
