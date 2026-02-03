@@ -13,6 +13,12 @@ interface BlogItem {
 
 export const POSTS: BlogItem[] = [
   {
+    slug: "openclaw-autonomous-agents",
+    title: "OpenClaw: The Framework for Autonomous AI That Actually Works",
+    description: "why proactive AI beats reactive chatbots, and what's actually possible now.",
+    date: "3 Feb 2026",
+  },
+  {
     slug: "shipping-beats-hype",
     title: "shipping beats hype. why small tools win.",
     description: "why building small tools matters more than chasing the next big idea.",
