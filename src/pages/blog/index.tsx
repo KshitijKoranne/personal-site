@@ -13,10 +13,10 @@ interface BlogItem {
 
 export const POSTS: BlogItem[] = [
   {
-    slug: "openclaw-autonomous-agents",
-    title: "OpenClaw: The Framework for Autonomous AI That Actually Works",
-    description: "why proactive AI beats reactive chatbots, and what's actually possible now.",
-    date: "3 Feb 2026",
+    slug: "openclaw-the-real-story",
+    title: "OpenClaw: 150K Stars, Moltbook, and Why AI Agents are Self-Organizing",
+    description: "the chaos, the crypto scam, and why agents building their own social network is the real inflection point.",
+    date: "4 Feb 2026",
   },
   {
     slug: "shipping-beats-hype",
