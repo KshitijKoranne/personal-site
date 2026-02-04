@@ -1,11 +1,30 @@
 import { BlogWrapper } from "@/components/blog/BlogWrapper";
 import { BlogContent } from "@/components/blog/BlogContent";
 import NextLink from "next/link";
+import Head from "next/head";
 
 export default function BlogPost() {
+  const title = "shipping beats hype. why small tools win.";
+  const description = "Why building small tools matters more than chasing the next big idea. How Quick Chess, Quick Symbols, YT Snap, and other small projects generate real income.";
+  const url = "https://kkshitij.vercel.app/blog/shipping-beats-hype";
+
   return (
-    <BlogWrapper>
-      <BlogContent>
+    <>
+      <Head>
+        <title>{title} | Kshitij</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="Chrome extensions, passive income, small tools, indie developers, building products" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <link rel="canonical" href={url} />
+      </Head>
+      <BlogWrapper>
+        <BlogContent>
         <div>
           <div className="flex items-center gap-3 mt-8">
             <NextLink
@@ -111,5 +130,6 @@ export default function BlogPost() {
         </p>
       </BlogContent>
     </BlogWrapper>
+    </>
   );
 }

@@ -1,11 +1,30 @@
 import { BlogWrapper } from "@/components/blog/BlogWrapper";
 import { BlogContent } from "@/components/blog/BlogContent";
 import NextLink from "next/link";
+import Head from "next/head";
 
 export default function BlogPost() {
+  const title = "OpenClaw: 150K Stars, Moltbook, and Why AI Agents are Self-Organizing";
+  const description = "The real story behind OpenClaw, from Clawdbot chaos to Moltbook agent self-organization. 150K GitHub stars, crypto scams, and why AI agents coordinating matters.";
+  const url = "https://kkshitij.vercel.app/blog/openclaw-the-real-story";
+
   return (
-    <BlogWrapper>
-      <BlogContent>
+    <>
+      <Head>
+        <title>{title} | Kshitij</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="OpenClaw, Clawdbot, Moltbot, AI agents, autonomous AI, Moltbook, GitHub" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <link rel="canonical" href={url} />
+      </Head>
+      <BlogWrapper>
+        <BlogContent>
         <div>
           <div className="flex items-center gap-3 mt-8">
             <NextLink
@@ -199,5 +218,6 @@ export default function BlogPost() {
         </p>
       </BlogContent>
     </BlogWrapper>
+    </>
   );
 }
