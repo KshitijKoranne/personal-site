@@ -13,6 +13,12 @@ interface BlogItem {
 
 export const POSTS: BlogItem[] = [
   {
+    slug: "2026-02-24-blog",
+    title: "The Year AI Stopped Being a Shortcut and Started Being Your Baseline",
+    description: "30% of Google's code. 25% of Microsoft's code. What happens when AI coding stops being optional and becomes mandatory?",
+    date: "24 Feb 2026",
+  },
+  {
     slug: "openclaw-the-real-story",
     title: "OpenClaw: 150K Stars, Moltbook, and Why AI Agents are Self-Organizing",
     description: "the chaos, the crypto scam, and why agents building their own social network is the real inflection point.",
