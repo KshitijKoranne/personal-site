@@ -1,0 +1,73 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/layouts/Main.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={`Software | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="software" pageDesc="things i've built">
+    <div class="flex flex-col gap-6 text-sm">
+      <div class="flex flex-col gap-3">
+        <div>
+          <p class="font-medium">
+            <a href="https://aztools.in" target="_blank" rel="noreferrer noopener" class="hover:text-accent transition-colors">
+              AZ Tools
+            </a>
+          </p>
+          <p class="text-foreground/50 text-xs">— More than 100 free no-login tools</p>
+        </div>
+
+        <div>
+          <p class="font-medium">
+            <a href="https://wastemytime.fun" target="_blank" rel="noreferrer noopener" class="hover:text-accent transition-colors">
+              wastemytime.fun
+            </a>
+          </p>
+          <p class="text-foreground/50 text-xs">— Fun & interactive time wasting activities</p>
+        </div>
+
+        <div>
+          <p class="font-medium">SuperAnnotate</p>
+          <p class="text-foreground/50 text-xs mb-1">— Beautiful screen annotations made effortless</p>
+          <div class="flex gap-3 text-xs">
+            <a
+              href="https://github.com/KshitijKoranne/personal-site/releases/download/SuperAnnotate-ver.1.0.0/SuperAnnotate-Windows.zip"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="hover:text-accent transition-colors"
+            >
+              Windows
+            </a>
+            <span class="text-foreground/30">|</span>
+            <span class="text-foreground/30 italic">macOS (Coming Soon)</span>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-medium">
+            <a href="https://yt-snap.vercel.app" target="_blank" rel="noreferrer noopener" class="hover:text-accent transition-colors">
+              YTSnap
+            </a>
+          </p>
+          <p class="text-foreground/50 text-xs">— YouTube thumbnail extractor</p>
+        </div>
+
+        <div>
+          <p class="font-medium">
+            <a href="https://github.com/KshitijKoranne/good-vibes" target="_blank" rel="noreferrer noopener" class="hover:text-accent transition-colors">
+              Good Vibe
+            </a>
+          </p>
+          <p class="text-foreground/50 text-xs mb-1">— A minimal macOS menu bar app for daily quotes</p>
+          <a href="/GoodVibe.dmg" class="text-xs hover:text-accent transition-colors" download>
+            Download for macOS
+          </a>
+        </div>
+      </div>
+    </div>
+  </Main>
+  <Footer />
+</Layout>

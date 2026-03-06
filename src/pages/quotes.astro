@@ -1,0 +1,110 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/layouts/Main.astro";
+import { SITE } from "@/config";
+
+const quotes = [
+  { id: "1", text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { id: "2", text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
+  { id: "3", text: "Your time is limited, so don't waste it living someone else's life.", author: "Steve Jobs" },
+  { id: "4", text: "Success is a lousy teacher. It seduces smart people into thinking they can't lose.", author: "Bill Gates" },
+  { id: "5", text: "It's fine to celebrate success, but it is more important to heed the lessons of failure.", author: "Bill Gates" },
+  { id: "6", text: "When something is important enough, you do it even if the odds are not in your favor.", author: "Elon Musk" },
+  { id: "7", text: "I think it is possible for ordinary people to choose to be extraordinary.", author: "Elon Musk" },
+  { id: "8", text: "The best way to predict the future is to invent it.", author: "Alan Kay" },
+  { id: "9", text: "Any sufficiently advanced technology is indistinguishable from magic.", author: "Arthur C. Clarke" },
+  { id: "10", text: "The computer was born to solve problems that did not exist before.", author: "Bill Gates" },
+];
+---
+
+<Layout title={`Quotes | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="quotes" pageDesc="i had a habit of collecting quotes in my childhood which i still find inspiring.">
+    <div class="flex flex-col divide-y divide-border/30 text-sm pb-12" id="quotes-list">
+      {quotes.map(q => (
+        <div class="flex items-start gap-3 py-3 quote-item" data-id={q.id}>
+          <p class="flex-1 leading-relaxed">
+            &ldquo;{q.text}&rdquo; &mdash; {q.author}
+          </p>
+          <button
+            class="heart-btn flex-shrink-0 mt-0.5 transition-transform hover:scale-110 active:scale-90"
+            data-id={q.id}
+            aria-label="Toggle favourite"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="heart-icon text-foreground/30 transition-colors"
+            >
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+      ))}
+    </div>
+  </Main>
+  <Footer />
+</Layout>
+
+<script>
+  function initQuotes() {
+    const stored = localStorage.getItem("heartedQuotes");
+    const hearted: Set<string> = new Set(stored ? JSON.parse(stored) : []);
+
+    function save() {
+      localStorage.setItem("heartedQuotes", JSON.stringify([...hearted]));
+    }
+
+    function applyState() {
+      const list = document.getElementById("quotes-list");
+      if (!list) return;
+
+      const items = [...list.querySelectorAll<HTMLElement>(".quote-item")];
+
+      // Apply heart icon colour
+      items.forEach(item => {
+        const id = item.dataset.id!;
+        const icon = item.querySelector<SVGElement>(".heart-icon");
+        if (!icon) return;
+        if (hearted.has(id)) {
+          icon.style.fill = "#ef4444";
+          icon.style.stroke = "#ef4444";
+        } else {
+          icon.style.fill = "none";
+          icon.style.stroke = "";
+          icon.style.removeProperty("stroke");
+        }
+      });
+
+      // Sort: hearted first, then rest (stable order)
+      const heartedItems = items.filter(i => hearted.has(i.dataset.id!));
+      const rest = items.filter(i => !hearted.has(i.dataset.id!));
+      [...heartedItems, ...rest].forEach(item => list.appendChild(item));
+    }
+
+    document.querySelectorAll<HTMLButtonElement>(".heart-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.dataset.id!;
+        if (hearted.has(id)) {
+          hearted.delete(id);
+        } else {
+          hearted.add(id);
+        }
+        save();
+        applyState();
+      });
+    });
+
+    applyState();
+  }
+
+  document.addEventListener("astro:page-load", initQuotes);
+</script>
