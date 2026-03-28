@@ -9,7 +9,6 @@ tags:
   - thoughts
 featured: true
 draft: false
-ogImage: /appleat50.png
 ---
 
 April 1, 1976. Steve Jobs, Steve Wozniak, and Ronald Wayne signed a partnership agreement in a Los Altos garage.
