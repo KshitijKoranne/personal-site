@@ -9,6 +9,7 @@ tags:
   - thoughts
 featured: true
 draft: false
+ogImage: /appleat50.png
 ---
 
 April 1, 1976. Steve Jobs, Steve Wozniak, and Ronald Wayne signed a partnership agreement in a Los Altos garage.
@@ -21,12 +22,9 @@ That's a genuinely strange achievement. Let's talk about it.
 
 <figure>
   <img
-    src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1200&q=80"
-    alt="Apple devices on a desk"
+    src="/appleat50.png"
+    alt="50 Years of Thinking Different — Apple's 50th anniversary artwork"
   />
-  <figcaption class="text-center">
-    Fifty years of design obsession, distilled into objects people carry everywhere.
-  </figcaption>
 </figure>
 
 ## the beginning (and it almost didn't happen)
