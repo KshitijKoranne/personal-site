@@ -20,12 +20,7 @@ Today, Apple is the most valuable company in the history of capitalism — a $3 
 
 That's a genuinely strange achievement. Let's talk about it.
 
-<figure>
-  <img
-    src="/appleat50.png"
-    alt="50 Years of Thinking Different — Apple's 50th anniversary artwork"
-  />
-</figure>
+![50 Years of Thinking Different — Apple's 50th anniversary artwork](/appleat50.png)
 
 ## the beginning (and it almost didn't happen)
 
