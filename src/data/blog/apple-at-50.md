@@ -1,7 +1,7 @@
 ---
 title: "apple at 50: half a century of denting the universe"
 description: "April 1, 1976. Three people signed a partnership in a garage. Fifty years later, that decision changed how billions of us work, think, and create."
-pubDatetime: 2026-04-01T09:00:00Z
+pubDatetime: 2026-03-28T09:00:00Z
 tags:
   - apple
   - tech
