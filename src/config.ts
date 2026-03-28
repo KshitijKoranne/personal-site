@@ -7,7 +7,7 @@ export const SITE = {
   ogImage: "devosfera-og.webp", // located in public folder — replace with your own OG image
   lightAndDarkMode: true,
   postPerIndex: 6,
-  postPerPage: 8,
+  postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
   showGalleries: true,
