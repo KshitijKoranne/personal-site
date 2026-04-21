@@ -145,16 +145,24 @@ i {
   overflow: hidden;
 }
 
+.premium-search .pagefind-ui__results {
+  padding: 0 !important;
+}
+
 .premium-search .pagefind-ui__result {
-  padding: 1.25rem;
+  padding: 1.25rem !important;
   border: 1px solid color-mix(in srgb, var(--border) 30%, transparent);
   border-radius: 1rem;
   background: color-mix(in srgb, var(--foreground) 2%, var(--background));
   transition: all 0.2s ease;
   margin-bottom: 1rem;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   width: 100%;
-  overflow: hidden;
+  list-style: none;
+}
+
+.premium-search .pagefind-ui__result-inner {
+  margin-top: 0 !important;
 }
 
 .premium-search .pagefind-ui__result:hover {
