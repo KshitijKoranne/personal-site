@@ -1,0 +1,37 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="card" x1="280" y1="180" x2="1320" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1280" cy="160" r="220" fill="#14b8a6" fill-opacity="0.12"/>
+  <circle cx="320" cy="760" r="260" fill="#f59e0b" fill-opacity="0.10"/>
+  <rect x="240" y="150" width="1120" height="600" rx="36" fill="url(#card)" stroke="#334155" stroke-width="2"/>
+  <rect x="320" y="220" width="360" height="26" rx="13" fill="#38bdf8" fill-opacity="0.95"/>
+  <rect x="320" y="272" width="520" height="18" rx="9" fill="#cbd5e1" fill-opacity="0.55"/>
+  <rect x="320" y="312" width="460" height="18" rx="9" fill="#cbd5e1" fill-opacity="0.40"/>
+  <g stroke="#94a3b8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M340 430h42v42h-42z"/>
+    <path d="M406 450l14 14 28-30"/>
+    <path d="M340 520h42v42h-42z"/>
+    <path d="M406 540l14 14 28-30"/>
+    <path d="M340 610h42v42h-42z"/>
+    <path d="M406 630l14 14 28-30"/>
+  </g>
+  <g fill="#e2e8f0" fill-opacity="0.92" font-family="Inter, Arial, sans-serif">
+    <text x="500" y="462" font-size="38">Write the one-sentence version</text>
+    <text x="500" y="552" font-size="38">Cut scope in half</text>
+    <text x="500" y="642" font-size="38">Ship the boring path first</text>
+  </g>
+  <rect x="900" y="250" width="320" height="320" rx="28" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <path d="M980 360h160M980 420h120M980 480h180" stroke="#22c55e" stroke-width="12" stroke-linecap="round"/>
+  <path d="M980 330l26 26 44-52" stroke="#22c55e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="920" y="660" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="26">From rough idea to shipped</text>
+  <text x="920" y="700" fill="#94a3b8" font-family="Inter, Arial, sans-serif" font-size="18">A simple checklist for making progress</text>
+</svg>
